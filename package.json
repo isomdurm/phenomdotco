@@ -15,5 +15,13 @@
     "start": "node server.js"
   },
   "author": "Isom Durm",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isomdurm/phenomdotco.git"
+  },
+  "bugs": {
+    "url": "https://github.com/isomdurm/phenomdotco/issues"
+  },
+  "homepage": "https://github.com/isomdurm/phenomdotco#readme"
 }
