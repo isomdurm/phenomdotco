@@ -7,10 +7,12 @@ var p = plivo.RestAPI({
 
 var sendText = function(phoneNumber) {
 
+    console.log(phoneNumber);
+
     var params = {
         'src': '18054701920', // Sender's phone number with country code
-        'dst' : '14152605028', // Receiver's phone Number with country code
-        'text' : "Click on this link to download the app now. www.phenom.co/download", // Your SMS Text Message - English
+        'dst' : phoneNumber.phoneNumber, // Receiver's phone Number with country code
+        'text' : "Make Some Noise! Tap the link below to download Phenom in the Apple App Store! 🏆 http://hwk.io/s/fjsir4", // Your SMS Text Message - English
         'url' : "http://www.phenom.co/download", // The URL to which with the status of the message is sent
         'method' : "GET" // The method used to call the url
     };
@@ -23,4 +25,4 @@ var sendText = function(phoneNumber) {
     });
 };
 
-module.exports = {plivo: sendText};
+module.exports = {sendText};

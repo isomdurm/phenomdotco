@@ -55,6 +55,30 @@ ul {
 	clear: both;
 }
 
+@media (min-width: 320px) { 
+
+.apple-btn {
+	visibility: visible;
+}
+
+#haha {
+	visibility: hidden;
+}
+
+}
+
+@media (min-width: 480px) { 
+
+.apple-btn {
+	visibility: hidden;
+}
+
+#haha {
+	visibility: visible;
+}
+
+}
+
 /*================================================================
 	General
 ================================================================*/
@@ -334,6 +358,14 @@ section {
 }
 
 .splash .apple-logo {
+    width: 20px;
+    height: 20px;
+    display: inline;
+    vertical-align: middle;
+    top: -3px;
+    margin-right: 10px;
+}
+.apple-logo {
     width: 20px;
     height: 20px;
     display: inline;

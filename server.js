@@ -38,9 +38,14 @@ app.get('/', function (req, res) {
 	res.render('home');
 });
 
+app.get('/campaign', function (req, res) {
+  res.render('campaign');
+});
+
 app.post('/send', function (req, res) {
-  p.plivo(req.body, function(err, response, body) {
-    var sentText = JSON.parse(body);
+  p.sendText(req.body, function(err, response, body) {
+    console.log(body);
+    console.log("BODY");
     res.json(sentText);
   });
 });
