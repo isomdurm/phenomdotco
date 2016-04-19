@@ -1,0 +1,19 @@
+{
+  "name": "phenom",
+  "version": "1.0.0",
+  "description": "Connect To Athletes Around The World",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "body-parser": "^1.15.0",
+    "plivo": "^0.3.3",
+    "express-session": "^1.13.0",
+    "ejs": "^2.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Isom Durm",
+  "license": "ISC"
+}
