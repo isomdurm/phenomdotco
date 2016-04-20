@@ -20,6 +20,8 @@
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js'></script>
 
+	<script src='js/script.js'></script>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -91,8 +93,8 @@ html, body {
 
 <div id='haha' class='col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4'>
 	<div style='text-align: center;'>
-		<input style='margin-bottom: 20px;' type="text" class="form-control" placeholder='phone: ' id="phoneNumber">
-		<div style='border-radius: 0px; background-color: #a18858; border: none; color: white; font-family: "UnitedSansSmCdHv", Arial, Helvetica, sans-serif;' class='btn btn-default'>SEND TEXT TO GET PHENOM</div>
+		<input style='margin-bottom: 20px;' title='Phone Number (Format: +99(99)9999-9999)' type='tel' pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' class="form-control"  id="phoneNumber" placeholder='*555-555-5555'>
+		<div id='btn-test' style='margin-bottom: 20px; border-radius: 0px; background-color: #a18858; border: none; color: white; font-family: "UnitedSansSmCdHv", Arial, Helvetica, sans-serif; letter-spacing: 4px;' class='btn btn-default'>SEND ME A DOWNLOAD LINK</div>
 	</div>
 </div>
 
