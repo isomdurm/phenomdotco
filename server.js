@@ -30,23 +30,20 @@ app.use(session({
 
 var p = require('./js/script.js');
 
-
-
-
 // RENDER HOME PAGE
 app.get('/', function (req, res) {
 	res.render('home');
 });
 
+// RENDER CAMPAIGN PAGE
 app.get('/campaign', function (req, res) {
   res.render('campaign');
 });
 
+//SEND TEXT MESSAGES
 app.post('/send', function (req, res) {
+  console.log(req.body);
   p.sendText(req.body, function(err, response, body) {
-    console.log(body);
-    console.log("BODY");
-    res.json(sentText);
   });
 });
 

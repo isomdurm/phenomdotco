@@ -7,8 +7,6 @@ var p = plivo.RestAPI({
 
 var sendText = function(phoneNumber) {
 
-    console.log(phoneNumber);
-
     var params = {
         'src': '18054701920', // Sender's phone number with country code
         'dst' : phoneNumber.phoneNumber, // Receiver's phone Number with country code
@@ -23,6 +21,7 @@ var sendText = function(phoneNumber) {
         console.log('Message UUID:\n', response['message_uuid']);
         console.log('Api ID:\n', response['api_id']);
     });
+
 };
 
 module.exports = {sendText};
