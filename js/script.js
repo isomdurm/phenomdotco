@@ -10,7 +10,7 @@ var sendText = function(phoneNumber) {
     var params = {
         'src': '18054701920', // Sender's phone number with country code
         'dst' : phoneNumber.phoneNumber, // Receiver's phone Number with country code
-        'text' : "Make Some Noise! Tap the link below to download Phenom in the Apple App Store! 🏆 http://hwk.io/s/fjsir4", // Your SMS Text Message - English
+        'text' : "Make Some Noise! Tap the link below to download Phenom in the Apple App Store! 🏆 http://hwk.io/s/TRHNMR", // Your SMS Text Message - English
         'url' : "http://www.phenom.co/download", // The URL to which with the status of the message is sent
         'method' : "GET" // The method used to call the url
     };
