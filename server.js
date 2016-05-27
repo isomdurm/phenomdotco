@@ -31,7 +31,7 @@ app.use(session({
 var p = require('./js/script.js');
 
 // RENDER HOME PAGE
-app.get('/*', function (req, res) {
+app.get('/p/*', function (req, res) {
 	res.render('singleMoment');
 });
 
