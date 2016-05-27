@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "MaisonNeueWEB-Light";
+    src:url("../fonts/MaisonNeueWEB-Light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "UnitedSansSmCdHv";
+    src:url("../fonts/UnitedSansSmCdHv.woff") format("woff"),
+    	url("../fonts/UnitedSansSmCdHv.eot") format("eot"),
+        url("../fonts/UnitedSansSmCdHv.ttf") format("truetype"),
+        url("../fonts/UnitedSansSmCdHv.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
