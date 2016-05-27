@@ -31,8 +31,12 @@ app.use(session({
 var p = require('./js/script.js');
 
 // RENDER HOME PAGE
+app.get('/*', function (req, res) {
+	res.render('singleMoment');
+});
+
 app.get('/', function (req, res) {
-	res.render('home');
+  res.render('home');
 });
 
 // RENDER CAMPAIGN PAGE
