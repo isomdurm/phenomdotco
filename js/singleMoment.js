@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    console.log(window.location.pathname);
+    console.log(window.location.href);
 
     var string = window.location.pathname;
 
@@ -8,7 +8,12 @@ $(document).ready(function(){
 
     if (string.charAt(0) == "/") {
         string = string.substr(1);
-}
+    }
+
+    if (string.charAt(0) == "m") {
+        string = string.substr(1);
+    }
+
     console.log(string);
 
     var settings = {
