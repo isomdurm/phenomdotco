@@ -249,14 +249,14 @@ $(document).ready(function(){
       "method": "GET"
     }
 
-     $.ajax(settings).done(function (response) {
-      console.log(response);
-      $('body').append('<img src="' + response.results.image + '" height="100%" width="100%" style="display: inline-block;" />');
+     $.ajax(settings).done(function (res) {
+      console.log(res);
+      $('body').append('<img src="' + res.results.image + '" height="100%" width="100%" style="display: inline-block;" />');
     
-      var headline = response.results.headline;
-      var userId = response.results.userId;
+      var headline = res.results.headline;
+      var userId = res.results.userId;
 
-      var createdAt = response.results.createdAt;
+      var createdAt = res.results.createdAt;
 
       console.log(createdAt);
 
@@ -268,7 +268,6 @@ $(document).ready(function(){
     }
 
       $.ajax(user).done(function (response) {
-            console.log(response);
             $('body').append('&nbsp;&nbsp;&nbsp;&nbsp;<div style="font-family: MaisonNeueWEB-Light, Helvetica, Arial, sans-serif; font-weight: lighter; display: inline-block; margin-left: 15px; margin-top: -5px; color: white; font-size: 15px;"><span style="font-family: MaisonNeueWEB-Light, Helvetica, Arial, sans-serif; color: #75ABBA;">' + response.results.username + ' ' + '</span>' + ' ' + ' ' + headline + '</div>');
             $('#momentUser').append('<div class="col-xs-2" style="height: 75px; padding-top: 18px;"><img src="' + response.results.imageUrl + '" height="40" width="40" style="border-radius: 20px; border: 2px solid white;"/></div>');
             $('#momentUser').append('<div class="col-xs-10" style="padding-left: 10px; margin-top: 18px; font-size: 20px; color: white; font-family: UnitedSansSmCdHv">' + response.results.firstName.toUpperCase() + ' ' + ' ' + response.results.lastName.toUpperCase() + '</div><div class="col-xs-10" style="margin-top: -8px; padding-left: 10px;"><time style="font-size: 10px; color: #90909A; font-family: MaisonNeueWEB-Light, Helvetica, Arial, sans-serif;" class="timeago" datetime="2014-05-26T20:10:32.486Z"></time><span style="font-size: 10px; color: #90909A; font-family: MaisonNeueWEB-Light, Helvetica, Arial, sans-serif;"> ' + ' ' + '-' + ' ' + response.results.hometown.toUpperCase() + '</span></div>');
