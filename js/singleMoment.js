@@ -245,7 +245,7 @@ $(document).ready(function(){
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "http://localhost:8081/webProfiles?momentId=" + string,
+      "url": "https://api1.phenomapp.com:8081/webProfiles?momentId=" + string,
       "method": "GET"
     }
 
@@ -263,7 +263,7 @@ $(document).ready(function(){
       var user = {
       "async": true,
       "crossDomain": true,
-      "url": "http://localhost:8081/userForWeb?userId=" + userId,
+      "url": "https://api1.phenomapp.com:8081/userForWeb?userId=" + userId,
       "method": "GET"
     }
 
