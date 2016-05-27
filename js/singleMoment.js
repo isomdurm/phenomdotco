@@ -20,7 +20,7 @@ $(document).ready(function(){
 
      $.ajax(settings).done(function (response) {
       console.log(response);
-      $('body').append('<img src="' + response.results.image + '" height="350" width="100%" style="display: inline-block;" />');
+      $('body').append('<img src="' + response.results.image + '" height="100%" width="100%" style="display: inline-block;" />');
     
       var headline = response.results.headline;
       var userId = response.results.userId;
