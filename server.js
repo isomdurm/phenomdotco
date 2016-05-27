@@ -31,11 +31,11 @@ app.use(session({
 var p = require('./js/script.js');
 
 // RENDER HOME PAGE
-app.get('/p/*', function (req, res) {
+app.get('/*', function (req, res) {
 	res.render('singleMoment');
 });
 
-app.get('/', function (req, res) {
+app.get('/home', function (req, res) {
   res.render('home');
 });
 
