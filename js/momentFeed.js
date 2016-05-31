@@ -217,7 +217,6 @@ $(document).ready(function(){
     }
 
      $.ajax(settings).done(function (res) {
-      console.log(res.results);
 
       res.results.forEach(function(moment){
 
@@ -232,11 +231,13 @@ $(document).ready(function(){
 
         $('body').append('<div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;"><img src="' + moment.image + '" width="100%" height="auto" /><span> Moment ID: ' + moment.id + '</span><br><span> Likes: ' + moment.likesCount + '</span><br><span>User ID: ' + user.results.username + '</span><br><time class="timeago" datetime="' + moment.createdAt + '"></div>')
 
+
+        $("time.timeago").timeago();
+        
          });
 
       });
 
-      $("time.timeago").timeago();
 
     });
 
