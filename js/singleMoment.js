@@ -226,8 +226,6 @@ $(document).ready(function(){
 
     $("time.timeago").timeago();
 
-    console.log(window.location.href);
-
     var string = window.location.pathname;
 
     var momentId = window.location.href.split('/')[4];
@@ -240,15 +238,12 @@ $(document).ready(function(){
     }
 
      $.ajax(settings).done(function (res) {
-      console.log(res);
       $('body').append('<img src="' + res.results.image + '" height="100%" width="100%" style="display: inline-block;" />');
     
       var headline = res.results.headline;
       var userId = res.results.userId;
 
       var createdAt = res.results.createdAt;
-
-      console.log(createdAt);
 
       var user = {
       "async": true,

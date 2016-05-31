@@ -16,10 +16,6 @@ var sendText = function(phoneNumber) {
     };
 
     p.send_message(params, function (status, response) {
-        console.log('Status: ', status);
-        console.log('API Response:\n', response);
-        console.log('Message UUID:\n', response['message_uuid']);
-        console.log('Api ID:\n', response['api_id']);
     });
 
 };

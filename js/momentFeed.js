@@ -230,9 +230,6 @@ $(document).ready(function(){
 
         $.ajax(user).done(function (user) {
 
-          console.log(user.results.username);
-          console.log(moment);
-
         $('body').append('<div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;"><img src="' + moment.image + '" width="100%" height="auto" /><span> Moment ID: ' + moment.id + '</span><br><span> Likes: ' + moment.likesCount + '</span><br><span>User ID: ' + user.results.username + '</span><br><time class="timeago" datetime="' + moment.createdAt + '"></div>')
 
          });
