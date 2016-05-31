@@ -3,7 +3,7 @@ $(document).ready(function(){
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://ap1.phenomapp.com:8081/webFeed",
+      "url": "https://api1.phenomapp.com:8081/webFeed",
       "method": "GET"
     }
 
