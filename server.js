@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var session = require('express-session');
 var plivo = require('plivo');
+var path = require('path');
 
 
 //requires models as the database
@@ -11,13 +12,13 @@ var plivo = require('plivo');
 
 app.set('view engine', 'ejs');
 
-app.use('/css', express.static('css'));
+app.use('/css', express.static(path.join(__dirname + '/css')));
 
-app.use('/fonts', express.static('fonts'));
+app.use('/fonts', express.static(path.join(__dirname + '/fonts')));
 
-app.use('/img', express.static('img'));
+app.use('/img', express.static(path.join(__dirname + '/img')));
 
-app.use('/js', express.static('js'));
+app.use('/js', express.static(path.join(__dirname + '/js')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -30,12 +31,21 @@ app.use(session({
 
 var p = require('./js/script.js');
 
-app.get('/m*', function (req, res) {
+app.get('/moment/*', function (req, res) {
+
 	res.render('singleMoment');
 });
 
 app.get('/', function (req, res) {
   res.render('home');
+});
+
+app.get('/topTen', function (req, res) {
+  res.render('curatedMoments');
+})
+
+app.get('/feed', function (req, res) {
+  res.render('momentFeed');
 });
 
 // RENDER CAMPAIGN PAGE

@@ -230,22 +230,12 @@ $(document).ready(function(){
 
     var string = window.location.pathname;
 
-    var headline;
-
-    if (string.charAt(0) == "/") {
-        string = string.substr(1);
-    }
-
-    if (string.charAt(0) == "m") {
-        string = string.substr(1);
-    }
-
-    console.log(string);
+    var momentId = window.location.href.split('/')[4];
 
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://api1.phenomapp.com:8081/webProfiles?momentId=" + string,
+      "url": "https://api1.phenomapp.com:8081/webProfiles?momentId=" + momentId,
       "method": "GET"
     }
 
