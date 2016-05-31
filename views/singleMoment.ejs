@@ -2,6 +2,58 @@
 <html>
 <head>
 <base href="/">
+<script>
+
+var string = window.location.pathname;
+
+    var momentId = window.location.href.split('/')[4];
+
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://api1.phenomapp.com:8081/webProfiles?momentId=" + momentId,
+      "method": "GET"
+    }
+
+     $.ajax(settings).done(function (res) {
+      console.log(res);
+      $('body').append('<img src="' + res.results.image + '" height="100%" width="100%" style="display: inline-block;" />');
+
+     $('#image').attr("content", res.results.image);
+
+     $('#url').attr("content", window.location.href);
+
+     $('#description').attr("content", res.results.headline);
+    
+      var headline = res.results.headline;
+      var userId = res.results.userId;
+
+      var createdAt = res.results.createdAt;
+
+      console.log(createdAt);
+
+      var user = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://api1.phenomapp.com:8081/userForWeb?userId=" + userId,
+      "method": "GET"
+    }
+
+      $.ajax(user).done(function (response) {
+
+           $('#title').attr("content", response.results.username);
+
+           $("title").html(response.results.username)
+            $('body').append('&nbsp;&nbsp;&nbsp;&nbsp;<div style="font-family: MaisonNeueWEB-Light, Helvetica, Arial, sans-serif; font-weight: lighter; display: inline-block; margin-left: 15px; margin-top: -5px; color: white; font-size: 15px;"><span style="font-family: MaisonNeueWEB-Light, Helvetica, Arial, sans-serif; color: #75ABBA;">' + response.results.username + ' ' + '</span>' + ' ' + ' ' + headline + '</div>');
+            $('#momentUser').append('<div class="col-xs-2" style="height: 75px; padding-top: 18px;"><img src="' + response.results.imageUrl + '" height="40" width="40" style="border-radius: 20px; border: 2px solid white;"/></div>');
+            $('#momentUser').append('<div class="col-xs-10" style="padding-left: 10px; margin-top: 18px; font-size: 20px; color: white; font-family: UnitedSansSmCdHv">' + response.results.firstName.toUpperCase() + ' ' + ' ' + response.results.lastName.toUpperCase() + '</div><div class="col-xs-10" style="margin-top: -8px; padding-left: 10px;"><time style="font-size: 10px; color: #90909A; font-family: MaisonNeueWEB-Light, Helvetica, Arial, sans-serif;" class="timeago" datetime="2014-05-26T20:10:32.486Z"></time><span style="font-size: 10px; color: #90909A; font-family: MaisonNeueWEB-Light, Helvetica, Arial, sans-serif;"> ' + ' ' + '-' + ' ' + response.results.hometown.toUpperCase() + '</span></div>');
+            $("time.timeago").timeago();
+
+        });
+
+    });
+
+</script>
 
 	<meta id="image" property="og:image"  content=""/>
 
