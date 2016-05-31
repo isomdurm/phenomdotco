@@ -55,7 +55,6 @@ app.get('/campaign', function (req, res) {
 
 //SEND TEXT MESSAGES
 app.post('/send', function (req, res) {
-  console.log(req.body);
   p.sendText(req.body, function(err, response, body) {
   });
 });
