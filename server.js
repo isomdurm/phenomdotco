@@ -31,7 +31,7 @@ app.use(session({
 
 var p = require('./js/script.js');
 
-app.get('/moment/*', function (req, res) {
+app.get('/m/*', function (req, res) {
 
 	res.render('singleMoment');
 });
